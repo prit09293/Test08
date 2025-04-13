@@ -1,0 +1,10 @@
+pyrogram
+tgcrypto
+flask
+pymongo
+requests
+Pillow
+rembg
+whisper
+telegraph
+onnxruntime
