@@ -222,16 +222,17 @@ async def eval_cmd(client, message: Message):
 
 # === Flask + Run ===
 from flask import Flask
-import threading
+import os
 
 web = Flask(__name__)
 
 @web.route("/")
 def home():
-    return "Bot is alive!"
+    return "It works!"
 
-def run_web():
-    web.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8080))
+    web.run(host="0.0.0.0", port=port)
 
 def run_bot():
     app.run()
